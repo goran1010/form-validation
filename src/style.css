@@ -41,14 +41,18 @@ input:invalid {
   border: 2px solid red;
   border-radius: 3px;
 }
-input:not(:focus):not(:active):placeholder-shown {
+input:not(:focus):not(:active):placeholder-shown:required {
   border: 2px solid yellowgreen;
 }
-
+input:not(:focus):not(:active):placeholder-shown {
+  border: 2px solid black;
+}
 select {
   font-size: 14px;
   padding: 2px;
   font-weight: bold;
+  border: 2px solid black;
+  border-radius: 3px;
 }
 option {
   font-weight: bold;
