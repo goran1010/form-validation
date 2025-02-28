@@ -3,7 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <form action="" novalidate autocomplete="off">
+      <legend>Please fill out <span>required</span> forms:</legend>
+      <div class="email">
+        <label for="mail">Email: <span>required</span></label>
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          autofocus
+          required
+          placeholder="myemail@example.com"
+          pattern=".{8,}@.+"
+        />
+      </div>
+      <div class="postal-code">
+        <label for="country"> Country:</label>
+        <select name="country" id="country">
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="France">France</option>
+        </select>
+      </div>
+      <div class="zip-code">
+        <label for="zip-code">Zip Code:</label
+        ><input type="text" id="zip-code" />
+      </div>
+      <div class="password">
+        <label for="password">Password: <span>required</span></label
+        ><input
+          type="password"
+          name="password"
+          id="password"
+          required
+          pattern="^(?=.*\d).{8,}$"
+        />
+      </div>
+      <div class="confirm-password">
+        <label for="confirm-password"
+          >Confirm password: <span>required</span></label
+        ><input
+          type="password"
+          name="confirm-password"
+          id="confirm-password"
+          required
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
