@@ -26,6 +26,7 @@ form {
   flex-direction: column;
   gap: 5px;
   font-weight: bold;
+  border: 2px solid blue;
 }
 input {
   outline: none;
@@ -35,9 +36,13 @@ input {
   border: 2px solid black;
   border-radius: 3px;
 }
+
 input:invalid {
   border: 2px solid red;
   border-radius: 3px;
+}
+input:not(:focus):not(:active):placeholder-shown {
+  border: 2px solid yellowgreen;
 }
 
 select {
@@ -62,7 +67,7 @@ span {
   font-size: 0.6em;
   position: relative;
   top: -5px;
-  color: rgb(146, 146, 9);
+  color: yellowgreen;
   text-transform: uppercase;
 }
 form > div {
